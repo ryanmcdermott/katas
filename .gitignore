@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 
+.release_time
+
 # Compiled Object files
 *.slo
 *.lo
