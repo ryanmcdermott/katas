@@ -1,5 +1,5 @@
-#include <iostream>
 #include <assert.h>
+#include <iostream>
 #include <unordered_map>
 
 using std::unordered_map;
@@ -8,9 +8,6 @@ using std::cout;
 /**
  * Hack to get a C array size, by moving pointer up until NULL termination
  * and increasing `size` variable.
- *
- * NOTE: Using std::vector is preferred in C++. This is for learning
- * about C arrays and pointers
  */
 int array_size(int array[]) {
   int size = 0;
@@ -22,11 +19,11 @@ int array_size(int array[]) {
   return size;
 }
 
-int* two_sum(int needle, int haystack[]) {
+int *two_sum(int needle, int haystack[]) {
   int size = array_size(haystack);
 
   int *indexes = new int[2];
-  unordered_map <int, int> lookup;
+  unordered_map<int, int> lookup;
 
   for (int i = 0; i < size; ++i) {
     lookup.emplace(haystack[i], i);
