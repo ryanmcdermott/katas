@@ -1,43 +1,66 @@
 #include "djikstras.hpp"
-#include <bits/stdc++.h>
+#include <algorithm>
 #include <iostream>
 #include <limits>
-#include <utility>
+#include <unordered_map>
+#include <vector>
+
 using namespace std;
-typedef pair<int, int> iPair;
 
-Graph::Graph(int V) {
-  this->V = V;
-  adj = new list<pair<int, int>>[V];
+void Graph::add_vertex(char key, unordered_map<char, int> edges) {
+  vertices.insert(
+      unordered_map<char, const unordered_map<char, int>>::value_type(key,
+                                                                      edges));
 }
 
-void Graph::addEdge(int u, int v, int w) {
-  adj[u].push_back(make_pair(v, w));
-  adj[v].push_back(make_pair(u, w));
-}
+vector<char> Graph::djikstra(char start, char finish) {
+  unordered_map<char, int> distances;
+  unordered_map<char, char> previous;
+  vector<char> nodes;
+  vector<char> path;
 
-void Graph::djikstra(int src) {
-  priority_queue<pair<int, int>> pq;
-  priority_queue<iPair, vector<iPair>, greater<iPair>> pq;
-  vector<pair<int, int>> dist(V, std::numeric_limits<int>::max());
-  dist[src] = 0;
-  pq.push(make_pair(src, 0));
-  while (!pq.empty()) {
-    int u = pq.top().first;
+  auto comparator = [&](char left, char right) {
+    return distances[left] > distances[right];
+  };
 
-    pq.pop();
+  for (auto &vertex : vertices) {
+    if (vertex.first == start) {
+      distances[vertex.first] = 0;
+    } else {
+      distances[vertex.first] = numeric_limits<int>::max();
+    }
 
-    for (list<pair<int, int>>::iterator i = adj[u].begin(); i != adj[u].end();
-         ++i) {
-      int v = (*i).first;
-      int neighbor_weight = (*i).second;
+    nodes.push_back(vertex.first);
+    push_heap(begin(nodes), end(nodes), comparator);
+  }
 
-      if (dist[v] > dist[u] + neighbor_weight) {
-        dist[v] = dist[u] + neighbor_weight;
-        pq.push(make_pair(v, dist[v]));
+  while (!nodes.empty()) {
+    pop_heap(begin(nodes), end(nodes), comparator);
+    char smallest = nodes.back();
+    nodes.pop_back();
+
+    if (smallest == finish) {
+      while (previous.find(smallest) != end(previous)) {
+        path.push_back(smallest);
+        smallest = previous[smallest];
+      }
+
+      break;
+    }
+
+    if (distances[smallest] == numeric_limits<int>::max()) {
+      break;
+    }
+
+    for (auto &neighbor : vertices[smallest]) {
+      int alt = distances[smallest] + neighbor.second;
+      if (alt < distances[neighbor.first]) {
+        distances[neighbor.first] = alt;
+        previous[neighbor.first] = smallest;
+        make_heap(begin(nodes), end(nodes), comparator);
       }
     }
   }
 
-  return dist;
+  return path;
 }

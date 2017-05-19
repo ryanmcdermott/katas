@@ -1,27 +1,30 @@
 #include "djikstras.hpp"
 
 int main() {
-  // create the graph given in above fugure
-  int V = 9;
-  Graph g(V);
+  int seq = 0;
+  char init_node = 'A';
+  char dest_node = 'G';
 
-  //  making above shown graph
-  g.addEdge(0, 1, 4);
-  g.addEdge(0, 7, 8);
-  g.addEdge(1, 2, 8);
-  g.addEdge(1, 7, 11);
-  g.addEdge(2, 3, 7);
-  g.addEdge(2, 8, 2);
-  g.addEdge(2, 5, 4);
-  g.addEdge(3, 4, 9);
-  g.addEdge(3, 5, 14);
-  g.addEdge(4, 5, 10);
-  g.addEdge(5, 6, 2);
-  g.addEdge(6, 7, 1);
-  g.addEdge(6, 8, 6);
-  g.addEdge(7, 8, 7);
+  Graph g;
+  g.add_vertex('A', {{'B', 1}, {'C', 4}, {'F', 2}});
+  g.add_vertex('B', {{'E', 2}});
+  g.add_vertex('C', {{'G', 2}, {'D', 4}});
+  g.add_vertex('D', {});
+  g.add_vertex('E', {{'D', 3}});
+  g.add_vertex('F', {{'C', 1}, {'G', 4}});
+  g.add_vertex('G', {{'E', 5}});
 
-  auto dist = g.shortestPath(0);
+  cout << "As initial node: " << init_node << endl;
+  cout << "As goal node: " << dest_node << endl;
+
+  for (char vertex : g.djikstra(init_node, dest_node)) {
+    cout << "Solution path from goal sequence : " << seq << " Node : " << vertex
+         << endl;
+    seq++;
+  }
+
+  cout << "Solution path from goal sequence : " << seq
+       << " Node : " << init_node << endl;
 
   return 0;
 }

@@ -1,15 +1,14 @@
-#include <bits/stdc++.h>
+#include <algorithm>
+#include <iostream>
+#include <limits>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
 class Graph {
-  int V;
-
-  list<pair<int, int>> *adj;
+  unordered_map<char, unordered_map<char, int>> vertices;
 
 public:
-  Graph(int V);
-
-  void addEdge(int u, int v, int w);
-
-  void djikstra(int s);
+  void add_vertex(char key, unordered_map<char, int> edges);
+  vector<char> djikstra(char source, char destination);
 };
