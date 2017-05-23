@@ -1,20 +1,4 @@
-#include <assert.h>
-#include <iostream>
-
-template <typename T>
-class Stack {
-private:
-  T *items;
-  int limit;
-  int size;
-  int position;
-public:
-  Stack(int limit);
-  ~Stack();
-  T pop();
-  void push(T);
-  int getSize();
-};
+#include "stack.hpp"
 
 template <typename T>
 Stack<T>::Stack(int lim) {
@@ -45,17 +29,4 @@ T Stack<T>::pop() {
 template <typename T>
 int Stack<T>::getSize() {
   return size;
-}
-
-int main() {
-  Stack<int> s(10);
-
-  s.push(42);
-  s.push(75);
-  s.push(100);
-
-  assert(s.getSize() == 3);
-  assert(s.pop() == 100);
-  assert(s.pop() == 75);
-  assert(s.pop() == 42);
 }
