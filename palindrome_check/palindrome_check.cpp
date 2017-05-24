@@ -1,9 +1,6 @@
-#include <assert.h>
-#include <iostream>
 #include <string>
 
 using std::string;
-using std::cout;
 
 bool palindrome_check(string s1, string s2) {
   if (s1.size() != s2.size()) {
@@ -22,12 +19,4 @@ bool palindrome_check(string s1, string s2) {
   }
 
   return true;
-}
-
-int main() {
-  assert(palindrome_check("taco", "ocat"));
-  assert(palindrome_check("sweet", "teews"));
-  assert(!palindrome_check("dennis", "ritchie"));
-  assert(!palindrome_check("c++", "c++"));
-  return 0;
 }
