@@ -1,5 +1,5 @@
-#include <iostream>
 #include "selection_sort.h"
+#include <iostream>
 
 using std::cout;
 using std::swap;

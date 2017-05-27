@@ -1,6 +1,6 @@
-#include "bubble_sort.hpp"
 #include <assert.h>
 #include <iostream>
+#include "bubble_sort.hpp"
 
 using std::cout;
 

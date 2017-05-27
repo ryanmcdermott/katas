@@ -1,7 +1,7 @@
-#include "kth_largest.h"
 #include <assert.h>
 #include <iostream>
 #include <vector>
+#include "kth_largest.h"
 
 using std::cout;
 using std::vector;

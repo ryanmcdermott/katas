@@ -1,7 +1,7 @@
-#include "find_non_duplicate.hpp"
 #include <assert.h>
 #include <iostream>
 #include <vector>
+#include "find_non_duplicate.hpp"
 
 using std::cout;
 using std::vector;

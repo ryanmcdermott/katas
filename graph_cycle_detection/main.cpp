@@ -1,6 +1,6 @@
-#include "graph_cycle_detection.hpp"
 #include <assert.h>
 #include <iostream>
+#include "graph_cycle_detection.hpp"
 using std::cout;
 
 int main() {

@@ -1,6 +1,6 @@
-#include "compare_trees.hpp"
 #include <assert.h>
 #include <iostream>
+#include "compare_trees.hpp"
 
 using std::cout;
 

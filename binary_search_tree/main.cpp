@@ -1,5 +1,5 @@
-#include "./binary_search_tree.hpp"
 #include <iostream>
+#include "./binary_search_tree.hpp"
 
 using std::cout;
 

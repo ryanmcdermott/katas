@@ -1,5 +1,5 @@
-#include "max_heap.h"
 #include <iostream>
+#include "max_heap.h"
 
 using std::cout;
 

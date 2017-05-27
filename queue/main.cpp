@@ -1,6 +1,6 @@
-#include "./queue.cpp"
-#include <iostream>
 #include <assert.h>
+#include <iostream>
+#include "./queue.cpp"
 
 using std::cout;
 

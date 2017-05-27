@@ -3,7 +3,7 @@
 
 using std::vector;
 struct MaxHeap {
-private:
+ private:
   vector<int> A;
 
   void swap(vector<int> array, int i, int j) {
@@ -44,7 +44,7 @@ private:
     }
   }
 
-public:
+ public:
   int size() { return A.size(); }
 
   int pop() {

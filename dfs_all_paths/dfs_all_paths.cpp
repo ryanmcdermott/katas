@@ -26,7 +26,8 @@ void Graph::print_paths(int source, int destination) {
   print_paths_helper(source, destination, visited, path, path_idx);
 }
 
-void Graph::print_paths_helper(int u, int destination, bool visited[], int path[], int &path_idx) {
+void Graph::print_paths_helper(int u, int destination, bool visited[],
+                               int path[], int &path_idx) {
   visited[u] = true;
   path[path_idx] = u;
   path_idx++;
@@ -35,8 +36,7 @@ void Graph::print_paths_helper(int u, int destination, bool visited[], int path[
     for (int i = 0; i < path_idx; i++) {
       cout << path[i];
     }
-  }
-  else {
+  } else {
     list<int>::iterator i;
     for (i = adjacency_list[u].begin(); i != adjacency_list[u].end(); i++) {
       if (!visited[*i]) {

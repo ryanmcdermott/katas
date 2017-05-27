@@ -1,6 +1,6 @@
 #include "./linked_list_reversed.h"
-#include <iostream>
 #include <stdlib.h>
+#include <iostream>
 
 void reverse(Node *current) {
   Node *prev = NULL;

@@ -12,7 +12,8 @@ Queue<T>::~Queue() {
   delete[] items;
 }
 
-template <typename T> T Queue<T>::pop_front() {
+template <typename T>
+T Queue<T>::pop_front() {
   T front = items[0];
   for (int i = 0; i < size; i++) {
     items[i] = items[i + 1];

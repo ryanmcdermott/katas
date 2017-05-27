@@ -1,6 +1,6 @@
-#include "parallel_summation.hpp"
 #include <assert.h>
 #include <stdio.h>
+#include "parallel_summation.hpp"
 
 int simple_sum(int array[], int n) {
   int sum = 0;

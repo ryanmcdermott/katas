@@ -1,7 +1,7 @@
-#include "longest_common_subsequence.hpp"
 #include <assert.h>
-#include <iostream>
 #include <string.h>
+#include <iostream>
+#include "longest_common_subsequence.hpp"
 
 using std::cout;
 

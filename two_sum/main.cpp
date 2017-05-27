@@ -1,6 +1,6 @@
-#include "two_sum.hpp"
 #include <assert.h>
 #include <iostream>
+#include "two_sum.hpp"
 
 using std::cout;
 

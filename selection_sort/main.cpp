@@ -1,5 +1,5 @@
-#include <iostream>
 #include <assert.h>
+#include <iostream>
 #include "selection_sort.h"
 
 using std::cout;

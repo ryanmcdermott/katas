@@ -1,6 +1,6 @@
-#include "stack.cpp"
 #include <assert.h>
 #include <iostream>
+#include "stack.cpp"
 
 int main() {
   Stack<int> s(10);

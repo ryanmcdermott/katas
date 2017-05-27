@@ -1,8 +1,8 @@
-#include "levenshtein.hpp"
 #include <assert.h>
 #include <iostream>
 #include <string>
 #include <vector>
+#include "levenshtein.hpp"
 
 using std::vector;
 using std::cout;

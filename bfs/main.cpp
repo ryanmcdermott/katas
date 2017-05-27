@@ -1,5 +1,5 @@
-#include "./bfs.hpp"
 #include <iostream>
+#include "./bfs.hpp"
 
 using std::cout;
 

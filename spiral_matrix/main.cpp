@@ -1,7 +1,7 @@
-#include "./spiral_matrix.hpp"
 #include <assert.h>
 #include <iostream>
 #include <vector>
+#include "./spiral_matrix.hpp"
 
 using std::vector;
 using std::cout;
