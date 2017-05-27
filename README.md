@@ -40,3 +40,9 @@ A new directory will be created with your `[folder]` name, in this case
   >`folder.cpp`: Kata code
 
   >`folder.hpp`: Kata header file included by main.cpp
+
+
+## Formatting
+If you want to format the code, run: `./format.sh` and all files in all folders
+will be formatted using `clang-format`. Ensure you have installed that ahead
+of time.
