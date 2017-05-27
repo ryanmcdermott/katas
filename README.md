@@ -8,6 +8,12 @@ Follow the instructions in the following order to build and test a kata.
 Instructions on creating a new kata are in the `Development` section below the
 _Building_ and _Testing_ sections.
 
+## Installation
+```
+sudo apt-get install clang
+sudo apt-get install clang-format
+```
+
 ## Building
 Run `build.sh [folder]` to build an executable in the `./[folder]/bin` directory
 
