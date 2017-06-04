@@ -1,7 +1,8 @@
 # cs-katas
 
-These are [katas](https://en.wikipedia.org/wiki/Kata_(programming) written in C++. They contain everything from common data
-structures, algorithms, and interview questions.
+These are [katas](https://en.wikipedia.org/wiki/Kata_(programming) written in
+C++. They contain everything from common data structures, algorithms, and
+programming problems.
 
 Follow the instructions in the following order to build and test a kata.
 
