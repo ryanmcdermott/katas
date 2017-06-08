@@ -1,4 +1,4 @@
-#include "./graph.cpp"
+#include "./graph.hpp"
 #include <assert.h>
 #include <iostream>
 
@@ -9,10 +9,13 @@ int main() {
   g.add_edge(0, 1);
   g.add_edge(0, 2);
   g.add_edge(1, 2);
-  g.add_edge(2, 0);
+  g.add_edge(1, 4);
   g.add_edge(2, 3);
-  g.add_edge(3, 3);
+  g.print();
 
   bool path_betweeen = g.is_path_between(0, 3);
   assert(path_betweeen == true);
+
+  path_betweeen = g.is_path_between(2, 4);
+  assert(path_betweeen == false);
 }

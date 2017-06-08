@@ -1,22 +1,60 @@
 #ifndef GRAPH_HPP_
 #define GRAPH_HPP_
-#include <list>
+#include <iostream>
+#include <queue>
+#include <stack>
 #include <unordered_map>
+#include <unordered_set>
 
-using std::list;
+using std::cout;
+using std::unordered_map;
+using std::unordered_set;
+using std::queue;
 
-template <class T> class Graph {
-  using EdgeList = std::list<T>;
-  using AdjacencyList = std::unordered_map<T, EdgeList>;
-
+template <typename T> class Graph {
 private:
-  AdjacencyList *adj;
+  unordered_map<T, unordered_set<T>> adjlist;
 
 public:
-  Graph();
-  ~Graph();
-  void add_edge(T source, T destination);
-  bool is_path_between(T source, T destination);
+  Graph(){};
+
+  void add_edge(T v, T w) { adjlist[v].insert(w); }
+
+  void print() {
+    for (auto vert : adjlist) {
+      for (auto adj_vert : vert.second) {
+        cout << vert.first << " - " << adj_vert << "\n";
+      }
+    }
+  }
+
+  bool is_path_between(T source, T destination) {
+    queue<T> q;
+    unordered_map<T, bool> visited;
+    T vertex = source;
+
+    q.push(vertex);
+
+    visited[source] = true;
+
+    while (!q.empty()) {
+      vertex = q.front();
+      q.pop();
+
+      for (auto adj : adjlist[vertex]) {
+        if (!visited[adj]) {
+          if (adj == destination) {
+            return true;
+          }
+
+          q.push(adj);
+          visited[adj] = true;
+        }
+      }
+    }
+
+    return false;
+  }
 };
 
 #endif
