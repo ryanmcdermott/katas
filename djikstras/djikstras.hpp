@@ -3,7 +3,9 @@
 #include <limits>
 #include <unordered_map>
 #include <vector>
-using namespace std;
+
+using std::vector;
+using std::unordered_map;
 
 class Graph {
   unordered_map<char, unordered_map<char, int>> vertices;

@@ -1,8 +1,10 @@
 #include "djikstras.hpp"
+#include <iostream>
 
+using std::cout;
 int main() {
   int seq = 0;
-  char init_node = 'A';
+  char source_node = 'A';
   char dest_node = 'G';
 
   Graph g;
@@ -14,17 +16,15 @@ int main() {
   g.add_vertex('F', {{'C', 1}, {'G', 4}});
   g.add_vertex('G', {{'E', 5}});
 
-  cout << "As initial node: " << init_node << endl;
-  cout << "As goal node: " << dest_node << endl;
+  cout << "\n";
+  cout << "Source node: " << source_node << "\n";
+  cout << "Destination node: " << dest_node << "\n";
+  cout << "\n";
 
-  for (char vertex : g.djikstra(init_node, dest_node)) {
-    cout << "Solution path from goal sequence : " << seq << " Node : " << vertex
-         << endl;
+  for (char vertex : g.djikstra(source_node, dest_node)) {
+    cout << "Path from: " << seq << " Node : " << vertex << "\n";
     seq++;
   }
 
-  cout << "Solution path from goal sequence : " << seq
-       << " Node : " << init_node << endl;
-
-  return 0;
+  cout << "Path from: " << seq << " Node : " << source_node << "\n";
 }

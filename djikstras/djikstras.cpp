@@ -5,7 +5,9 @@
 #include <unordered_map>
 #include <vector>
 
-using namespace std;
+using std::vector;
+using std::unordered_map;
+using std::numeric_limits;
 
 void Graph::add_vertex(char key, unordered_map<char, int> edges) {
   vertices.insert(
@@ -16,6 +18,7 @@ void Graph::add_vertex(char key, unordered_map<char, int> edges) {
 vector<char> Graph::djikstra(char start, char finish) {
   unordered_map<char, int> distances;
   unordered_map<char, char> previous;
+
   vector<char> nodes;
   vector<char> path;
 
@@ -48,12 +51,9 @@ vector<char> Graph::djikstra(char start, char finish) {
       break;
     }
 
-    if (distances[smallest] == numeric_limits<int>::max()) {
-      break;
-    }
-
     for (auto &neighbor : vertices[smallest]) {
       int alt = distances[smallest] + neighbor.second;
+
       if (alt < distances[neighbor.first]) {
         distances[neighbor.first] = alt;
         previous[neighbor.first] = smallest;

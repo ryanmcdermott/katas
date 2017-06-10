@@ -1,4 +1,4 @@
-# cs-katas
+# katas
 
 These are [katas](https://en.wikipedia.org/wiki/Kata_(programming) written in
 C++. They contain everything from common data structures, algorithms, and
