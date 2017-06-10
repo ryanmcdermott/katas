@@ -1,17 +1,20 @@
-#include <iostream>
 #include "./linked_list_reversed.h"
+#include <assert.h>
+#include <iostream>
 
 using std::cout;
 
 int main() {
-  LinkedList l;
-  l.addValue(5);
-  l.addValue(12);
-  l.addValue(24);
-  l.addValue(70);
+  Node *head = new Node;
+  push(&head, 5);
+  push(&head, 9);
+  push(&head, 13);
+  push(&head, 20);
 
-  Node *current = l.getHead();
-  reverse(current);
+  print_list(head);
 
-  cout << l.popValue();
+  reverse(&head);
+
+  print_list(head);
+  assert(head->next->data == 5);
 }

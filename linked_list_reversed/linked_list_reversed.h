@@ -1,34 +1,10 @@
-using namespace std;
-#include <cstddef>
 struct Node {
-  int x;
+  int data;
   Node *next;
 };
 
-class LinkedList {
-public:
-  LinkedList() { Node *head = NULL; }
+void push(struct Node **head, int data);
 
-  void addValue(int val) {
-    Node *n = new Node();
-    n->x = val;
-    n->next = head;
-    head = n;
-  }
+void reverse(Node **node);
 
-  int popValue() {
-    Node *n = this->head;
-    int ret = n->x;
-
-    head = head->next;
-    delete n;
-    return ret;
-  }
-
-  Node *getHead() { return this->head; }
-
-private:
-  Node *head;
-};
-
-void reverse(Node *node);
+void print_list(Node *head);
