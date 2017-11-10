@@ -1,5 +1,5 @@
-#ifndef ALGORITHM_H_
-#define ALGORITHM_H_
+#ifndef ALGORITHM_h_
+#define ALGORITHM_h_
 
 void ALGORITHM();
 
