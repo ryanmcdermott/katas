@@ -9,13 +9,7 @@ struct Node {
   struct Node *right;
 };
 
-struct Node *newNode(int data) {
-  struct Node *node = (struct Node *)malloc(sizeof(struct Node));
-  node->data = data;
-  node->left = 0;
-  node->right = 0;
-  return (node);
-}
+struct Node *newNode(int data);
 
 bool sum_tree_check(Node *root);
 
