@@ -12,4 +12,21 @@ int main() {
   for (auto &key : keys) {
     insert(root, key);
   }
+
+  bool result;
+
+  result = search(root, "free");
+  assert(result == true);
+
+  result = search(root, "freedom");
+  assert(result == true);
+
+  result = search(root, "freed");
+  assert(result == true);
+
+  result = search(root, "test");
+  assert(result == false);
+
+  result = search(root, "foobar");
+  assert(result == false);
 }
