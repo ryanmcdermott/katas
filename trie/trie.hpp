@@ -13,7 +13,7 @@ struct TrieNode {
 
 void insert(TrieNode *root, string key);
 
-struct TrieNode *createNode();
+struct TrieNode *createTrieNode();
 
 bool search(TrieNode *root, string key);
 

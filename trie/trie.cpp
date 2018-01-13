@@ -3,9 +3,21 @@
 
 using std::string;
 
-void insert(TrieNode *root, string key) {}
+void insert(TrieNode *root, string key) {
+  struct TrieNode *node = root;
+  for (int i = 0; i < key.length(); i++) {
+    int index = key[i] - 'a';
+    if (!node->children[index]) {
+      node->children[index] = createTrieNode();
+    }
 
-struct TrieNode *createNode() {
+    root = node->children[index];
+  }
+
+  node->isEnd = true;
+}
+
+struct TrieNode *createTrieNode() {
   struct TrieNode *root = new TrieNode();
   root->isEnd = false;
 

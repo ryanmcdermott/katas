@@ -1,14 +1,14 @@
-#include "./trie.hpp"
 #include <assert.h>
 #include <iostream>
 #include <string>
+#include "./trie.hpp"
 
 using std::cout;
 using std::string;
 
 int main() {
   string keys[] = {"freedom", "free", "freed", "trial", "judgment", "fury"};
-  struct TrieNode *root = getTrieNode();
+  struct TrieNode *root = createTrieNode();
   for (auto &key : keys) {
     insert(root, key);
   }
