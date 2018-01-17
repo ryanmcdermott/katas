@@ -3,6 +3,8 @@
 
 .release_time
 
+.vscode
+
 # Compiled Object files
 *.slo
 *.lo
