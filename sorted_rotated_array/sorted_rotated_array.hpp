@@ -1,6 +1,6 @@
 #ifndef sorted_rotated_array_h_
 #define sorted_rotated_array_h_
 
-void sorted_rotated_array();
+int sorted_rotated_array(int arr[], int low, int high, int key);
 
 #endif

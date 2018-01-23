@@ -1,2 +1,2 @@
 #include "./sorted_rotated_array.hpp"
-void sorted_rotated_array() {}
+int sorted_rotated_array(int arr[], int low, int high, int key) {}
