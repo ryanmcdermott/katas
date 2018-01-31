@@ -1,6 +1,9 @@
 #ifndef buy_sell_stock_h_
 #define buy_sell_stock_h_
 
-void buy_sell_stock();
+#include <vector>
+using std::vector;
+
+int buy_sell_stock(vector<int> &prices);
 
 #endif
