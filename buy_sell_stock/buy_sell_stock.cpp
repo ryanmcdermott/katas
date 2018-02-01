@@ -17,4 +17,6 @@ int buy_sell_stock(vector<int> &prices) {
     max_profit = max(max_profit_now, max_profit);
     current_min_price = min(current_min_price, price);
   }
+
+  return max_profit;
 }
