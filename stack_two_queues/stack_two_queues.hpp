@@ -1,6 +1,15 @@
 #ifndef stack_two_queues_h_
 #define stack_two_queues_h_
 
-void stack_two_queues();
+class stack_two_queues {
+ public:
+  stack_two_queues() {}
+
+  void pop();
+
+  void push();
+
+  int top();
+};
 
 #endif
