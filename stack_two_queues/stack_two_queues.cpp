@@ -10,7 +10,7 @@ class stack_two_queues {
 
   void pop() {}
 
-  void push() {}
+  void push(int num) {}
 
   int top() {}
 };
