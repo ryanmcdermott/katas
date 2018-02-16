@@ -9,9 +9,13 @@ void printBoard(vector<vector<int>> board) {
   int N = board[0].size();
   for (int i = 0; i < N; i++) {
     for (int j = 0; j < N; j++) {
-      cout << board[i][j];
+      cout << board[i][j] << " ";
     }
+
+    cout << "\n";
   }
+
+  cout << "\n\n\n";
 }
 
 bool isMoveOpen(vector<vector<int>> board, int row, int column) {
@@ -24,13 +28,13 @@ bool isMoveOpen(vector<vector<int>> board, int row, int column) {
     }
   }
 
-  for (i = row, j = column; j >= 0, i >= 0; i--, j--) {
+  for (i = row, j = column; j >= 0 && i >= 0; i--, j--) {
     if (board[i][j]) {
       return false;
     }
   }
 
-  for (i = row, j = column; i < N, j >= 0; i++, j--) {
+  for (i = row, j = column; i < N && j >= 0; i++, j--) {
     if (board[i][j]) {
       return false;
     }
