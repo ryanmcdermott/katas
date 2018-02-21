@@ -1,2 +1,5 @@
 #include "./convex_hull.hpp"
-void convex_hull() {}
+#include <vector>
+using std::vector;
+
+vector<Point> convex_hull(Point points[], int n) {}
