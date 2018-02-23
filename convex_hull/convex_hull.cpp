@@ -18,10 +18,6 @@ int orientation(Point p, Point q, Point r) {
 }
 
 vector<Point> convex_hull(Point points[], int n) {
-  if (n < 3) {
-    return;
-  }
-
   vector<Point> hull;
 
   int l = 0;
