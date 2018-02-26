@@ -7,6 +7,6 @@ struct Node {
 };
 
 struct Node *newNode(int data);
-struct Node *binary_tree_lca(Node *root, int n1, int n2) {}
+struct Node *binary_tree_lca(Node *root, int n1, int n2);
 
 #endif
