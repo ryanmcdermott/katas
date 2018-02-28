@@ -1,2 +1,2 @@
 #include "./subset_sum.hpp"
-void subset_sum() {}
+bool subset_sum(int set[], int n, int sum) { return true; }
