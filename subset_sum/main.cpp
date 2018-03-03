@@ -8,4 +8,5 @@ int main() {
   int set[] = {2, 3, 5, 7, 20};
   int n = sizeof(set) / sizeof(set[0]);
   bool isSubset = subset_sum(set, n, 28);
+  assert(isSubset == true);
 }
