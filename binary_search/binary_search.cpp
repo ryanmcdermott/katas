@@ -1,3 +1,6 @@
+// Time complexity: O(log(n))
+// Space complexity: O(n)
+
 int binary_search(int needle, int haystack[]) {
   int right = sizeof(haystack);
   int left = 0;
