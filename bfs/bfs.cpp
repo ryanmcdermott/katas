@@ -5,6 +5,8 @@
 using std::list;
 using std::cout;
 
+// Time complexity: O(V + E)
+// Space complexity: O(V)
 Graph::Graph(int vertex_count) {
   adj = new list<int>[vertex_count];
   this->vertex_count = vertex_count;
