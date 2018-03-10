@@ -1,3 +1,6 @@
+// Time complexity: O(log(n))
+// Space complexity: O(n)
+
 #include "./binary_search_tree.hpp"
 #include <iostream>
 
