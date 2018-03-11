@@ -1,3 +1,6 @@
+// Time complexity: O(n)
+// Space complexity: O(n)
+
 #include "binary_tree_check.hpp"
 #include <limits.h>
 
