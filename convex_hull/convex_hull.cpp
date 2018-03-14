@@ -1,3 +1,6 @@
+// Time complexity: O(m*n)
+// Space complexity: O(1)
+
 #include "./convex_hull.hpp"
 #include <vector>
 using std::vector;
