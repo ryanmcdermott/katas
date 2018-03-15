@@ -1,3 +1,6 @@
+// Time complexity: O(E log(V))
+// Space complexity: O(V)
+
 #include "djikstras.hpp"
 #include <algorithm>
 #include <iostream>
