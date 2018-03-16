@@ -1,3 +1,6 @@
+// Time complexity: O(log(n))
+// Space complexity: O(1)
+
 #include "./exponent.hpp"
 int exponent(int x, int y) {
   if (y == 0) {
