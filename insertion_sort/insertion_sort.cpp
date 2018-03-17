@@ -1,3 +1,6 @@
+// Time complexity: O(n^2)
+// Space complexity: O(1)
+
 #include "./insertion_sort.hpp"
 void insertion_sort(int arr[], int size) {
   for (int i = 1; i < size; i++) {
