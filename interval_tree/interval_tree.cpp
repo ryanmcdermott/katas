@@ -1,6 +1,9 @@
+// Time complexity: O(log(n))
+// Space complexity: O(n)
+
 #include "interval_tree.hpp"
-#include <iostream>
 #include <stddef.h>
+#include <iostream>
 
 using std::cout;
 
