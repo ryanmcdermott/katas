@@ -1,3 +1,6 @@
+// Time complexity: O(nW)
+// Space complexity: O(n)
+
 #include "./knapsack.hpp"
 
 int max(int a, int b) { return (a > b) ? a : b; }
