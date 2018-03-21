@@ -1,6 +1,9 @@
+// Time complexity: O(E * log(V))
+// Space complexity: O(V)
+
 #include "./prim.hpp"
-#include <functional>
 #include <limits.h>
+#include <functional>
 #include <list>
 #include <queue>
 #include <utility>
