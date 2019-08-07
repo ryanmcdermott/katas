@@ -11,6 +11,7 @@ Instructions on creating a new kata are in the `Development` section
 ## Installation
 
 ```
+git clone git@github.com:ryanmcdermott/katas.git
 sudo apt-get install clang
 sudo apt-get install clang-format
 ```
